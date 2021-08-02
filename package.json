@@ -2,9 +2,10 @@
   "name": "node_mailMerge",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,8 @@
   },
   "homepage": "https://github.com/griffindavis02/node_mailMerge#readme",
   "dependencies": {
-    "Express": "^3.0.1",
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "express": "^4.17.1",
     "fetch": "^1.1.0"
   }
 }
