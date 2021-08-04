@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -23,14 +22,38 @@ body {
     background-color: #fff;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .to,
-.subject {
+.subject,
+.cc,
+.bcc {
     outline: 0;
     position: relative;
     margin: 1rem 0rem .5rem .5rem;
     background-color: transparent;
+}
+
+.cc,
+.bcc {
+    margin-left: 3rem;
+    visibility: hidden;
+    margin-top: -2rem;
+}
+
+.to-options {
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+}
+
+.to-options button {
+    border: 0;
+    border-radius: 5px;
+    padding: .3rem;
+    background-color: rgba(150, 216, 255, 0.062);
+    cursor: pointer;
 }
 
 .label::after {
@@ -60,14 +83,14 @@ body {
 .editor {
     outline: 0;
     padding: .5rem;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     min-height: 500px;
     max-height: 500px;
     overflow-y: scroll;
 }
 
 #toolbar {
-    display:flex;
+    display: flex;
     flex-direction: row nowrap;
     list-style: none;
     margin: 1rem;
@@ -81,7 +104,7 @@ body {
     padding: .5rem;
     margin-right: .5rem;
     font-size: 1.5rem;
-    background-color:rgba(150, 216, 255, 0.719);
+    background-color: rgba(150, 216, 255, 0.719);
     cursor: pointer;
 }
 
