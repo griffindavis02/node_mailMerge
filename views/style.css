@@ -9,13 +9,61 @@ body {
     background: rgb(111, 202, 255);
     font-family: 'Poppins';
     font-size: 1rem;
-    color: #fff;
+    color: #212F3C;
     width: 60%;
     margin: auto;
 }
 
 #title {
     padding: 1rem;
+    color: #fff;
+}
+
+#email {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.to,
+.subject {
+    outline: 0;
+    position: relative;
+    margin: 1rem 0rem .5rem .5rem;
+    background-color: transparent;
+}
+
+.label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid rgb(111, 202, 255);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.label {
+    position: absolute;
+    width: 99%;
+    height: 100%;
+    border-bottom: 1px solid #212F3C;
+    overflow: hidden;
+}
+
+.highlighted::after {
+    transform: translateX(0%);
+}
+
+.editor {
+    outline: 0;
+    padding: .5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    min-height: 500px;
+    max-height: 500px;
+    overflow-y: scroll;
 }
 
 #toolbar {
@@ -30,36 +78,8 @@ body {
     display: block;
     border: none;
     padding: .5rem;
+    margin-right: .5rem;
     font-size: 1.5rem;
     background-color:rgba(150, 216, 255, 0.719);
-}
-
-#email {
-    background-color: #fff;
-    color: #000;
-}
-
-[contenteditable] {
-    outline: 0px solid transparent;
-}
-
-#to:focus-within,
-#from:focus-within {
-    outline: none;
-}
-
-#to,
-#from {
-    border-width: 0px;
-    border: none;
-    margin: 1rem;
-    outline: 0;
-}
-
-#editor {
-    padding: .5rem;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    min-height: 500px;
-    max-height: 500px;
-    overflow-y: scroll;
+    cursor: pointer;
 }
